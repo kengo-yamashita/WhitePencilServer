@@ -5,24 +5,26 @@ export class User {
 
     // 管理連番
     @PrimaryGeneratedColumn()
-    id : number;
+    id: number;
 
     // 作成日
     @CreateDateColumn()
     createAt: Date;
 
     // 編集日
+    @UpdateDateColumn()
     updateAt: Date;
 
     // バージョン
+    @VersionColumn()
     version: number;
 
     // ユーザー名
     @Column()
-    name : string;
+    name: string;
 
     //  パスワード
     @Column()
-    password : string;
+    password: string;
 
 }
